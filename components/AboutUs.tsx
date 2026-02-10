@@ -1,7 +1,10 @@
 
 import React, { useEffect, useRef } from 'react';
 import { PageType } from '../App';
-import tahaImage from './assests/istockphoto-1387900612-612x612.jpg';
+import tahaImage from './assests/sunny.jpeg';
+import aleemImage from './assests/aleem.jpeg';
+import wassemImage from './assests/waseem.jpeg';
+import robotImage from './assests/istockphoto-1387900612-612x612.jpg'
 
 // Added onNavigate to props interface
 interface AboutUsProps {
@@ -21,22 +24,22 @@ const leadership = [
     name: "Aleem Haider",
     role: "Senior Backend & WordPress Developer",
     location: "Gilgit, Pakistan",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2070&auto=format&fit=crop",
+    image: aleemImage,
     bio: "With 4 years of experience in WordPress and Node.js development, Aleem Haider specializes in building robust, scalable backend systems and custom WordPress solutions that empower businesses to achieve their digital goals efficiently."
   },
   {
     name: "Wassem Abbas",
     role: "Senior Full-Stack & WordPress Developer",
     location: "gilgit, pakistan",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
+    image: wassemImage,
     bio: "With 4 years of experience in WordPress, Wix, JavaScript, and React.js, Wassem Abbas builds versatile, high-performance web solutions, combining frontend and backend expertise to deliver seamless digital experiences for clients."
   },
   {
-    name: "Jasmin Oestreich",
-    role: "Head of Business Development",
-    location: "Munich, Germany",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070&auto=format&fit=crop",
-    bio: "Jasmin is an experienced Strategy and Business Development professional with a strong background in company building, tech innovation, and the European startup ecosystem. In her role as Head of Business Development, she builds sustainable partnerships, identifies new market opportunities, and implements innovative growth strategies. With extensive experience in team building and leadership roles across German and international technology companies, Jasmin drives SunnieLabs's expansion in the DACH region and strengthens the company's position as a trusted technology partner for high-profile clients."
+    name: "Tanzeel Hussain",
+    role: "MERN Stack Developer",
+    location: "Islamabad, Pakistan",
+    image: robotImage,
+    bio: "Tanzeel is a MERN Stack Developer specializing in building high-performance, scalable web applications. With strong expertise in React and Node.js, he delivers clean, efficient, and production-ready solutions."
   }
 ];
 
@@ -68,7 +71,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ targetSection, onNavigate }) => {
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white">
           <h1 className="text-2xl md:text-8xl font-extrabold mb-12 reveal tracking-tight">About SunnieLabs</h1>
           <p className="max-w-3xl text-lg md:text-2xl opacity-90 leading-relaxed reveal font-medium" style={{ transitionDelay: '0.2s' }}>
-            SunnieLabs is the partner of choice for many of the world's SME, start-ups, and technology challengers. We help businesses elevate their value through custom software development, product design, QA and consultancy services.
+            At Sunnie Labs, we are a results-driven web development and digital solutions company committed to building modern, scalable, and high-performance applications. We help startups, businesses, and enterprises turn their ideas into powerful digital products through clean code, intuitive design, and smart technology.
           </p>
         </div>
       </section>
@@ -79,7 +82,9 @@ const AboutUs: React.FC<AboutUsProps> = ({ targetSection, onNavigate }) => {
           <div className="lg:w-1/2 reveal">
             <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-12">Our Vision</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-             At Sunnie Labs, we strive to create real, measurable value for our clients. What sets us apart is our unwavering commitment to quality and attention to detail. We are more than just a development team—we act as strategic partners, sharing the risks and rewards of innovation, so our clients can confidently embrace new technologies and achieve bold growth.
+             At Sunnie Labs, our vision is to create real, measurable value for our clients through technology that drives meaningful impact. We are committed to excellence, with a strong focus on quality, precision, and attention to detail in everything we build.
+
+We go beyond traditional development services by acting as true strategic partners. We collaborate closely with our clients, sharing both the risks and rewards of innovation, so they can confidently adopt new technologies and pursue ambitious growth.
             </p>
           </div>
           <div className="lg:w-1/2 reveal" style={{ transitionDelay: '0.2s' }}>

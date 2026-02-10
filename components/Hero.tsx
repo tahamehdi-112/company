@@ -114,14 +114,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
     { label: 'Years of Experience', value: 5, prefix: '+', suffix: '' },
     { label: 'Projects Delivered', value: 10, prefix: '+', suffix: '' },
     { label: 'Development Hours', value: 20, prefix: '+', suffix: 'K' },
-    { label: 'Raised by Clients', value: 30, prefix: '+$', suffix: 'k' },
+    { label: 'Raised by Clients', value: 10, prefix: '+$', suffix: 'k' },
   ];
 
   return (
-    <section className="relative min-h-screen md:h-screen lg:min-h-[900px] w-full flex items-center overflow-hidden bg-black">
+    <section className="relative min-h-screen md:h-screen lg:min-h-[900px] w-full flex items-center overflow-hidden ">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          src="/company/dist/assets/home-banner.jpg"
           alt="Modern Architecture"
           className="w-full h-full object-cover brightness-[0.2]"
         />

@@ -193,24 +193,30 @@ const ContactPage: React.FC<ContactPageProps> = ({ targetSection, onNavigate }) 
             <h2 className="text-4xl lg:text-7xl font-extrabold mb-20 tracking-tighter">Our offices</h2>
             <div className="space-y-16">
               <div>
-                <h3 className="text-xl font-extrabold mb-8 tracking-widest uppercase opacity-60">EMEA</h3>
+                <h3 className="text-xl font-extrabold mb-8 tracking-widest uppercase opacity-60">Pakistan Head Office</h3>
                 <div className="space-y-10">
                    <div className="space-y-4">
-                      <p className="text-lg font-bold">40-42 Brondesbury Park, London NW6 7DW, UK</p>
-                      <p className="text-blue-500 font-medium">+44 7375 600038</p>
+                      <p className="text-lg font-bold">Islamabad</p>
+                      <p className="text-blue-500 font-medium">3rd Floor, Evacuee Trust Complex,
+Aga Khan Road, F-5/1, Islamabad, Pakistan</p>
                    </div>
                    <div className="space-y-4 pt-4 border-t border-white/10">
-                      <p className="text-lg font-bold">Goldäckerstr 66, 71144 Steinenbronn, Germany</p>
-                      <p className="text-blue-500 font-medium">+49 176 37130790</p>
+                      <p className="text-lg font-bold">Gilgit</p>
+                      <p className="text-blue-500 font-medium">Mehdi Colony, Sakwar,
+Gilgit, Gilgit-Baltistan, Pakistan</p>
                    </div>
                 </div>
               </div>
               <div className="pt-16 border-t border-white/10">
-                <h3 className="text-xl font-extrabold mb-8 tracking-widest uppercase opacity-60">APAC</h3>
+                <h3 className="text-xl font-extrabold mb-8 tracking-widest uppercase opacity-60">CONTACT</h3>
                 <div className="space-y-4">
-                  <p className="text-lg font-bold">21-22 J3, Johar Town, Lahore, Pakistan</p>
-                  <p className="text-blue-500 font-medium">+92 321 4615804</p>
+                  <p className="text-lg font-bold">PHONE</p>
+                  <p className="text-blue-500 font-medium">+92 310 910 7980</p>
+                  <p className="text-lg font-bold">Email</p>
+                  <p className="text-blue-500 font-medium">tahamehdi1272@gmail.com</p>
                 </div>
+
+                
               </div>
             </div>
           </div>

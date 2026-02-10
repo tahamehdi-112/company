@@ -4,22 +4,22 @@ import { PageType } from '../App';
 
 const testimonials = [
   {
-    quote: "Working with SunnieLabs has been a truly rewarding experience. We needed to reinforce our Engineering team, and SunnieLabs provided outstanding engineers who exceeded expectations. Skilled in multiple programming languages, they quickly adapted to our architecture and AI workflows, helping us build a strong, long-term partnership.",
+    quote: "NexusStrata Inception sets a new standard for digital delivery. From strategy to execution, their AI-driven approach enabled a seamless launch ahead of schedule with outstanding performance and zero critical issues. A truly forward-thinking technology partner.",
     author: "Arjen de Graaf",
     role: "VP Product, Valutico",
-    image: "https://picsum.photos/id/64/100/100"
+    image: "/company/dist/assets/client1.jpg"
   },
   {
-    quote: "SunnieLabs transformed our legacy infrastructure into a high-performance cloud ecosystem. Their DevOps expertise is world-class, and their commitment to security ensured our data remained protected throughout the migration. They are more than a vendor; they are a strategic partner.",
+    quote: "This loan calculator is incredibly accurate and easy to use. It breaks down monthly repayments, interest rates, and LVR calculations with clarity, while accounting for state-specific rules and variations. What usually takes hours of manual calculations is handled instantly, making it an invaluable tool for both professionals and everyday users. The detailed insights help users make confident, well-informed financial decisions",
     author: "Sarah Jenkins",
     role: "CTO, TechStream",
-    image: "https://picsum.photos/id/65/100/100"
+    image: "/company/dist/assets/client2.jpg"
   },
   {
-    quote: "The rapid application delivery promised by SunnieLabs was exactly what we got. We launched our fintech platform two weeks ahead of schedule with zero critical bugs. Their '360-degree approach' really shows in the final product's polish and performance.",
+    quote: "I’m really happy with the website NeoxRenoveta received. The work clearly helped our business look more professional and trustworthy online. Everything was delivered on time, and communication was smooth throughout the process. I truly appreciate the effort and quality of work.",
     author: "David Chen",
     role: "Founder, Peak Mobile",
-    image: "https://picsum.photos/id/66/100/100"
+    image: "/company/dist/assets/client3.jpg"
   }
 ];
 
