@@ -3,8 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageType } from '../App';
 import "./hero.css";
-import heroImg from '/company/dist/assets/home-banner.jpg';
-
+import heroImg from './assests/bannerva.jpg';
 const sliderContent = [
   {
     headline: "We are Sunnie Labs, an engineering-led software company focused on developing reliable, scalable applications powered by modern cloud and web technologies.",
