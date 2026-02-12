@@ -111,7 +111,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   };
 
   const statsData = [
-    { label: 'Years of Experience', value: 5, prefix: '+', suffix: '' },
+    { label: 'Years of Experience', value: 7, prefix: '+', suffix: '' },
     { label: 'Projects Delivered', value: 10, prefix: '+', suffix: '' },
     { label: 'Development Hours', value: 20, prefix: '+', suffix: 'K' },
     { label: 'Raised by Clients', value: 10, prefix: '+$', suffix: 'k' },
@@ -149,10 +149,10 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   key={i}
                   className={`absolute w-full py-8 transition-all duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] transform ${offsetClass}`}
                 >
-                  <h1 id="hero-headline" className="text-4xl md:text-5xl lg:text-5xl font-bold w-[70%] text-white leading-10 tracking-tight pr-12 mb-6">
+                  <h1 id="hero-headline" className="text-sm md:text-5xl lg:text-5xl font-bold w-[70%] text-white leading-10 tracking-tight pr-12 mb-6">
                     {item.headline}
                   </h1>
-                  <p className="text-lg md:text-xl text-white/70 max-w-2xl leading-relaxed">
+                  <p className="text-sm md:text-5xl text-white/70 max-w-2xl leading-relaxed">
                     {item.subtext}
                   </p>
                 </div>

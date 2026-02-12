@@ -20,21 +20,21 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     {
       title: "Services",
       links: [
-        { name: "Application Development", id: "what-we-do" },
-        { name: "Cloud Infrastructures & Migration", id: "what-we-do" },
-        { name: "DevOps And MLOps", id: "what-we-do" },
-        { name: "Application Reengineering", id: "what-we-do" },
-        { name: "UX Consulting", id: "what-we-do" },
-        { name: "Quality Assurance", id: "what-we-do" }
+        { name: "Full-Stack Development", id: "what-we-do" },
+        { name: "React.js Applications", id: "what-we-do" },
+        { name: "WordPress Websites", id: "what-we-do" },
+        { name: "Wix Websites", id: "what-we-do" },
+        { name: "UI/UX Design", id: "what-we-do" },
+        { name: "API Development", id: "what-we-do" }
       ]
     },
     {
       title: "How We Work",
       links: [
-        { name: "Engagement Models", id: "how-we-work" },
-        { name: "Development Process", id: "how-we-work" },
-        { name: "Resource Augmentation", id: "how-we-work" },
-        { name: "Dedicated Team", id: "how-we-work" }
+        { name: "Consult & Plan", id: "how-we-work" },
+        { name: "Design & Prototype", id: "how-we-work" },
+        { name: "Develop & Build", id: "how-we-work" },
+        { name: "Test & Optimize", id: "how-we-work" }
       ]
     }
   ];
@@ -60,16 +60,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div className="space-y-6 text-sm text-gray-600">
               <div>
                 <p className="font-bold text-gray-900 uppercase tracking-widest text-xs mb-2">EMEA</p>
-                <p className="font-bold text-gray-900">GILGIT</p>
-                <p>mehdi colony sakwar gilgit</p>
+                <p className="font-bold text-gray-900">Islamabad</p>
+                <p>3rd Floor, Evacuee Trust Complex, Aga Khan Road, F-5/1, Islamabad, Pakistan</p>
               </div>
               <div>
-                <p className="font-bold text-gray-900">Germany</p>
-                <p>Goldäckerstr 66, 71144 Steinenbronn</p>
+                <p className="font-bold text-gray-900">Gilgit</p>
+                <p>Mehdi Colony, Sakwar, Gilgit, Gilgit-Baltistan, Pakistan</p>
               </div>
               <div>
-                <p className="font-bold text-gray-900 uppercase tracking-widest text-xs mb-2">APAC</p>
-                <p>23-21 J5 Johar Town, Lahore, Pakistan</p>
+                <p className="font-bold text-gray-900 uppercase tracking-widest text-xs mb-2">PHONE</p>
+                <p>+92 310 910 7980</p>
               </div>
             </div>
           </div>
@@ -103,14 +103,15 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li className="flex items-center gap-2">
                  <span className="w-5 h-5 bg-blue-100 text-blue-600 flex items-center justify-center rounded">✉</span>
-                 <a href="tahamehdi1272@gmail.com" className="hover:text-blue-600">Email</a>
+                 <a href="" target="_blank" className="hover:text-blue-600">Email</a>
+                 
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 text-center gap-4">
-          <p>SunnieLabs Technologies Ltd. is registered with Companies House in the UK (reg no. 07104640) and with FBR in Pakistan (reg no. 3520210232873, ref no. 8920703-2).</p>
+          <p>SunnieLabs Technologies Pvt. Ltd. is registered in Pakistan with FBR (Reg. No. 3520210232873, Ref. No. 8920703-2) and operates globally, providing web development, design, and software solutions to clients across multiple countries.</p>
           <p>Copyright © 2024 SunnieLabs Technologies Ltd. All rights reserved.</p>
         </div>
       </div>

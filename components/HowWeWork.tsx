@@ -2,19 +2,21 @@
 import React, { useState } from 'react';
 import { ChevronRight, ChevronDown } from 'lucide-react';
 import { PageType } from '../App';
+import workWith from './assests/withus.jpg';
+import doIt from './assests/doit.jpg';
 
 const engagementModels = [
   {
     title: "Resource Augmentation",
-    desc: "Reach time-to-market targets and release deadlines faster with augmented staff members.",
-    ourResponsibility: "Creating a team with an optimal skill set and ensuring its productivity",
-    clientResponsibility: "Providing requirements and ensuring workload"
+    desc: "Scale your development team quickly with skilled professionals to meet project deadlines and accelerate time-to-market.",
+    ourResponsibility: "Build a team with the right skills and ensure high productivity",
+    clientResponsibility: "Provide requirements and manage workload"
   },
   {
     title: "Dedicated Team",
-    desc: "Hire a dedicated project-based team to meet all IT-related needs and bring your product idea to life. This includes PoC development, software engineering and reengineering services.",
-    ourResponsibility: "Deliver product on time and within budget",
-    clientResponsibility: "Provide product vision, scope and desired timeline"
+    desc: "Hire a skilled, project-focused team to turn your product ideas into reality, including development, engineering, and PoC delivery.",
+    ourResponsibility: "Deliver projects on time and within budget",
+    clientResponsibility: "Provide product vision, scope, and timeline"
   }
 ];
 
@@ -61,15 +63,15 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ onNavigate }) => {
     <div className="">
       <section className="relative h-[80vh] min-h-[600px] flex items-center bg-gray-900 overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" 
+          src={workWith}
           className="absolute inset-0 w-full h-full object-cover opacity-60" 
           alt="Team collaboration" 
         />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white text-center">
-          <h1 className="text-5xl md:text-8xl font-extrabold mb-8 reveal tracking-tight">HOW WE WORK</h1>
+          <h1 className="text-sm md:text-5xl font-extrabold mb-8 reveal tracking-tight">HOW WE WORK</h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl opacity-90 leading-relaxed reveal font-medium" style={{ transitionDelay: '0.2s' }}>
-            Our experienced engineers and diverse engagement models help you address complex business problems with streamlined, high-quality solutions.
+           Our expert team delivers scalable, high-quality web and software solutions through efficient processes tailored to your business needs.
           </p>
         </div>
       </section>
@@ -79,7 +81,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ onNavigate }) => {
           <div className="text-center mb-20 reveal">
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">Engagement Models</h2>
             <p className="max-w-3xl mx-auto text-gray-500 text-lg">
-              At SunnieLabs, we provide a full range of services aimed at delivering long-term value for both our customers and end users.
+              We offer flexible collaboration models to deliver high-quality, scalable web and software solutions that create long-term value for our clients
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -141,7 +143,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ onNavigate }) => {
             </div>
             <div className="lg:w-1/2 w-full reveal" style={{ transitionDelay: '0.2s' }}>
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white/5">
-                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop" className="w-full h-[600px] object-cover" alt="Process and Design" />
+                <img src={doIt} className="w-full h-[600px] object-cover" alt="Process and Design" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-12 left-12">
                    <div className="px-6 py-3 bg-blue-600 text-white rounded-full font-bold text-sm uppercase tracking-widest">Digital Excellence</div>

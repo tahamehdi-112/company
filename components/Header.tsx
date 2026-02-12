@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Globe, ChevronRight, Menu, X, ChevronDown } from 'lucide-react';
 import { PageType } from '../App';
+import code from './assests/code.jpg';
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -145,7 +146,7 @@ const Header: React.FC<HeaderProps> = ({ isScrolled, onNavigate, currentPage }) 
             <div className="bg-[#f8f9fa] rounded-2xl p-8 max-w-xl flex gap-8 items-center border border-gray-50">
               <div className="w-1/2 h-48 rounded-xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop" 
+                  src={code}
                   alt="Accurate Estimate" 
                   className="w-full h-full object-cover"
                 />

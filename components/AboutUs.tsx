@@ -4,7 +4,8 @@ import { PageType } from '../App';
 import tahaImage from './assests/sunny.jpeg';
 import aleemImage from './assests/aleem.jpeg';
 import wassemImage from './assests/waseem.jpeg';
-import robotImage from './assests/istockphoto-1387900612-612x612.jpg'
+import robotImage from './assests/istockphoto-1387900612-612x612.jpg';
+import tanzeelImage from './assests/tanzeel.jpeg';
 
 // Added onNavigate to props interface
 interface AboutUsProps {
@@ -38,7 +39,7 @@ const leadership = [
     name: "Tanzeel Hussain",
     role: "MERN Stack Developer",
     location: "Islamabad, Pakistan",
-    image: robotImage,
+    image: tanzeelImage,
     bio: "Tanzeel is a MERN Stack Developer specializing in building high-performance, scalable web applications. With strong expertise in React and Node.js, he delivers clean, efficient, and production-ready solutions."
   }
 ];
@@ -69,7 +70,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ targetSection, onNavigate }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white">
-          <h1 className="text-2xl md:text-8xl font-extrabold mb-12 reveal tracking-tight">About SunnieLabs</h1>
+          <h1 className="text-sm md:text-5xl font-extrabold mb-12 reveal tracking-tight">About SunnieLabs</h1>
           <p className="max-w-3xl text-lg md:text-2xl opacity-90 leading-relaxed reveal font-medium" style={{ transitionDelay: '0.2s' }}>
             At Sunnie Labs, we are a results-driven web development and digital solutions company committed to building modern, scalable, and high-performance applications. We help startups, businesses, and enterprises turn their ideas into powerful digital products through clean code, intuitive design, and smart technology.
           </p>

@@ -1,25 +1,26 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { PageType } from '../App';
+import contaCt from './assests/contact.jpg';
 
 const testimonials = [
   {
-    text: "SunnieLabs Technologies consistently delivers results of the highest quality. We first got to know CEO Ali Haider as an excellent employee, and this has led to a long-standing, reliable trust relationship. Their expertise in open source IAM is unmatched.",
-    author: "Peter Gietz",
-    role: "Founder and CEO, DAASI International",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop"
-  },
-  {
-    text: "We needed to reinforce our Engineering team for a mission-critical Fintech project. SunnieLabs provided senior-level engineers who adapted to our architecture instantly. A truly strategic partner for long-term growth.",
+    text: "NexusStrata Inception sets a new standard for digital delivery. From strategy to execution, their AI-driven approach enabled a seamless launch ahead of schedule with outstanding performance and zero critical issues. A truly forward-thinking technology partner.",
     author: "Arjen de Graaf",
     role: "VP Product, Valutico",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2070&auto=format&fit=crop"
+    image: "/company/dist/assets/client1.jpg"
   },
   {
-    text: "Their cloud infrastructure expertise allowed us to migrate with zero downtime. The team at SunnieLabs is highly professional, responsive, and clearly experts in DevOps and MLOps workflows.",
+    text: "This loan calculator is incredibly accurate and easy to use. It breaks down monthly repayments, interest rates, and LVR calculations with clarity, while accounting for state-specific rules and variations. What usually takes hours of manual calculations is handled instantly, making it an invaluable tool for both professionals and everyday users. The detailed insights help users make confident, well-informed financial decisions",
     author: "Sarah Jenkins",
-    role: "CTO, TechStream Global",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070&auto=format&fit=crop"
+    role: "CTO, TechStream",
+    image: "/company/dist/assets/client2.jpg"
+  },
+  {
+    text: "I’m really happy with the website NeoxRenoveta received. The work clearly helped our business look more professional and trustworthy online. Everything was delivered on time, and communication was smooth throughout the process. I truly appreciate the effort and quality of work.",
+    author: "David Chen",
+    role: "Founder, Peak Mobile",
+    image: "/company/dist/assets/client3.jpg"
   }
 ];
 
@@ -75,10 +76,10 @@ const ContactPage: React.FC<ContactPageProps> = ({ targetSection, onNavigate }) 
   return (
     <div className="min-h-screen">
       {/* Contact Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-blue-600">
+      <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-gray-900">
         <div className="absolute inset-0 opacity-40">
            <img 
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop" 
+            src={contaCt}
             alt="Professional background" 
             className="w-full h-full object-cover"
            />
