@@ -2,6 +2,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { PageType } from '../App';
+import hoMe1 from './assests/home1.jpg';
 
 const services = [
   {
@@ -43,7 +44,7 @@ const ServicesSticky: React.FC<ServicesStickyProps> = ({ onNavigate }) => {
           <div className="w-full lg:w-[42%] order-1 lg:order-2 lg:sticky lg:top-32 self-start z-10">
             <div className="aspect-[16/10] lg:aspect-[4/5] w-full rounded-2xl lg:rounded-[2.5rem] overflow-hidden shadow-xl lg:shadow-2xl border-4 lg:border-8 border-white bg-gray-200">
               <img
-                src="/company/dist/assets/home1.jpg"
+                src={hoMe1}
                 alt="Development Team Working"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />

@@ -4,7 +4,6 @@ import { PageType } from '../App';
 import tahaImage from './assests/sunny.jpeg';
 import aleemImage from './assests/aleem.jpeg';
 import wassemImage from './assests/waseem.jpeg';
-import robotImage from './assests/istockphoto-1387900612-612x612.jpg';
 import tanzeelImage from './assests/tanzeel.jpeg';
 
 // Added onNavigate to props interface

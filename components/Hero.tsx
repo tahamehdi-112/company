@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PageType } from '../App';
 import "./hero.css";
+import heroImg from '/company/dist/assets/home-banner.jpg';
 
 const sliderContent = [
   {
@@ -121,7 +122,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
     <section className="relative min-h-screen md:h-screen lg:min-h-[900px] w-full flex items-center overflow-hidden ">
       <div className="absolute inset-0 z-0">
         <img
-          src="/company/dist/assets/home-banner.jpg"
+          src={heroImg}
           alt="Modern Architecture"
           className="w-full h-full object-cover brightness-[0.2]"
         />
