@@ -18,7 +18,7 @@ const leadership = [
     role: "Founder & Senior web Engineer",
     location: "Gilgit, Pakistan",
     image: tahaImage,
-    bio: "With 6 years of experience in React,Vue.js and node.js development, Taha Mehdi drives Sunnie Labs’ frontend engineering, creating high-performance, scalable, and user-friendly web applications that delight clients and end-users alike."
+    bio: "With 6 years of experience in React,Vue.js and node.js development, Taha Mehdi drives WebLance's frontend engineering, creating high-performance, scalable, and user-friendly web applications that delight clients and end-users alike."
   },
   {
     name: "Aleem Haider",
@@ -69,9 +69,9 @@ const AboutUs: React.FC<AboutUsProps> = ({ targetSection, onNavigate }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white">
-          <h1 className="text-sm md:text-5xl font-extrabold mb-12 reveal tracking-tight">About SunnieLabs</h1>
+          <h1 className="text-sm md:text-5xl font-extrabold mb-12 reveal tracking-tight">About WebLance</h1>
           <p className="max-w-3xl text-lg md:text-2xl opacity-90 leading-relaxed reveal font-medium" style={{ transitionDelay: '0.2s' }}>
-            At Sunnie Labs, we are a results-driven web development and digital solutions company committed to building modern, scalable, and high-performance applications. We help startups, businesses, and enterprises turn their ideas into powerful digital products through clean code, intuitive design, and smart technology.
+            At WebLance, we are a results-driven web development and digital solutions company committed to building modern, scalable, and high-performance applications. We help startups, businesses, and enterprises turn their ideas into powerful digital products through clean code, intuitive design, and smart technology.
           </p>
         </div>
       </section>
@@ -82,7 +82,7 @@ const AboutUs: React.FC<AboutUsProps> = ({ targetSection, onNavigate }) => {
           <div className="lg:w-1/2 reveal">
             <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-12">Our Vision</h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-             At Sunnie Labs, our vision is to create real, measurable value for our clients through technology that drives meaningful impact. We are committed to excellence, with a strong focus on quality, precision, and attention to detail in everything we build.
+             At WebLance, our vision is to create real, measurable value for our clients through technology that drives meaningful impact. We are committed to excellence, with a strong focus on quality, precision, and attention to detail in everything we build.
 
 We go beyond traditional development services by acting as true strategic partners. We collaborate closely with our clients, sharing both the risks and rewards of innovation, so they can confidently adopt new technologies and pursue ambitious growth.
             </p>

@@ -6,7 +6,7 @@ import "./hero.css";
 import heroImg from './assests/bannerva.jpg';
 const sliderContent = [
   {
-    headline: "We are Sunnie Labs, an engineering-led software company focused on developing reliable, scalable applications powered by modern cloud and web technologies.",
+    headline: "We are WebLance, an engineering-led software company focused on developing reliable, scalable applications powered by modern cloud and web technologies.",
     subtext: ""
   },
   {

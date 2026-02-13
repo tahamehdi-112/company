@@ -7,7 +7,7 @@ import hoMe from './assests/working.jpg';
 const services = [
   {
     title: "Exceptional Quality & Precision",
-    description: "At Sunnie Labs, quality is at the core of everything we do. We act not just as developers, but as strategic technology partners, handling projects of any scale with meticulous attention to detail. Our work isn’t complete until you’re fully satisfied, and with a client satisfaction rating of 97%, you can trust your project is in expert hands."
+    description: "At WebLance, quality is at the core of everything we do. We act not just as developers, but as strategic technology partners, handling projects of any scale with meticulous attention to detail. Our work isn’t complete until you’re fully satisfied, and with a client satisfaction rating of 97%, you can trust your project is in expert hands."
   },
   {
     title: "Innovative & Scalable Technology",
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Fast & Reliable Delivery",
-    description: "From kickoff to launch, Sunnie Labs ensures your project moves efficiently without compromising quality. We value your time and are committed to delivering reliable, production-ready solutions on schedule."
+    description: "From kickoff to launch, WebLance ensures your project moves efficiently without compromising quality. We value your time and are committed to delivering reliable, production-ready solutions on schedule."
   },
   {
     title: "Flexible Team Scaling",
@@ -23,7 +23,7 @@ const services = [
   },
   {
     title: "End to End Software Solutions",
-    description: "Sunnie Labs offers a full lifecycle approach to software development—from ideation and design to deployment and ongoing support. Our team collaborates closely with yours, aligning with your time zones to ensure seamless communication and maximum productivity."
+    description: "WebLance offers a full lifecycle approach to software development—from ideation and design to deployment and ongoing support. Our team collaborates closely with yours, aligning with your time zones to ensure seamless communication and maximum productivity."
   }
 ];
 
@@ -36,7 +36,7 @@ const ServicesSticky: React.FC<ServicesStickyProps> = ({ onNavigate }) => {
     <section className="py-20 lg:py-24 bg-gray-50 overflow-visible">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-12 lg:mb-16 max-w-4xl leading-tight">
-          The Value You Gain With Sunnie Labs Development Services
+          The Value You Gain With WebLance Development Services
         </h2>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start relative">

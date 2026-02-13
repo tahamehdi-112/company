@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { PageType } from '../App';
+import logo from './assests/logo.png';
 
 interface FooterProps {
   onNavigate: (page: PageType, section?: string) => void;
@@ -49,14 +50,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               className="flex items-center gap-2 mb-6 cursor-pointer"
               onClick={() => onNavigate('home')}
             >
-              <div className="w-8 h-8 rounded-full border-2 border-blue-600 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-sm rotate-45 bg-blue-600"></div>
+              <div className="w-8 h-8 rounded-full  flex items-center justify-center">
+                <img src={logo} className="w-8 h-8 rounded-sm"></img>
               </div>
               <span className="text-2xl font-bold tracking-tight text-gray-900">
-                SunnieLabs
+                WebLance
               </span>
             </div>
-            <p className="font-bold text-gray-900 mb-6">SunnieLabs Technologies Ltd.</p>
+            <p className="font-bold text-gray-900 mb-6">WebLance Technologies Ltd.</p>
             <div className="space-y-6 text-sm text-gray-600">
               <div>
                 <p className="font-bold text-gray-900 uppercase tracking-widest text-xs mb-2">EMEA</p>
@@ -111,8 +112,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
 
         <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-400 text-center gap-4">
-          <p>SunnieLabs Technologies Pvt. Ltd. is registered in Pakistan with FBR (Reg. No. 3520210232873, Ref. No. 8920703-2) and operates globally, providing web development, design, and software solutions to clients across multiple countries.</p>
-          <p>Copyright © 2024 SunnieLabs Technologies Ltd. All rights reserved.</p>
+          <p>WebLance Technologies Pvt. Ltd. is registered in Pakistan with FBR (Reg. No. 3520210232873, Ref. No. 8920703-2) and operates globally, providing web development, design, and software solutions to clients across multiple countries.</p>
+          <p>Copyright © 2024 WebLance Technologies Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

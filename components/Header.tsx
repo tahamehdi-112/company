@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Globe, ChevronRight, Menu, X, ChevronDown } from 'lucide-react';
 import { PageType } from '../App';
 import code from './assests/code.jpg';
+import logo from './assests/logo.png';
+
 
 interface HeaderProps {
   isScrolled: boolean;
@@ -47,11 +49,11 @@ const Header: React.FC<HeaderProps> = ({ isScrolled, onNavigate, currentPage }) 
           className="flex items-center gap-2 cursor-pointer relative z-[60]"
           onClick={() => onNavigate('home')}
         >
-          <div className={`w-8 h-8 rounded-full border-2 ${isHeaderActive ? 'border-blue-600' : 'border-white'} flex items-center justify-center transition-colors duration-300`}>
-            <div className={`w-4 h-4 rounded-sm rotate-45 ${isHeaderActive ? 'bg-blue-600' : 'bg-white'} transition-colors duration-300`}></div>
+          <div className={`w-8 h-8 p-0 rounded-full border- ${isHeaderActive ? 'border-blue-600' : 'border-white'} bg-transparent flex items-center justify-center transition-colors duration-300`}>
+            <img src={logo} className={`w-10 h-8 rounded-sm  ${isHeaderActive ? 'bg-transparent' : 'bg-transparent'} transition-colors duration-300`}></img>
           </div>
           <span className={`text-2xl font-bold tracking-tight ${isHeaderActive ? 'text-gray-900' : 'text-white'} transition-colors duration-300`}>
-            SunnieLabs
+            WebLance
           </span>
         </div>
 

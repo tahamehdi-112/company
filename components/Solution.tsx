@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { PageType } from '../App';
+import demo from './assests/demo.png';
 
 interface SolutionProps {
   onNavigate: (page: PageType) => void;
@@ -16,7 +17,7 @@ const Solution: React.FC<SolutionProps> = ({ onNavigate }) => {
           </h2>
           <div className="space-y-6 text-gray-600 leading-relaxed text-lg">
             <p>
-             At Sunnie Labs, we focus on delivering high performance digital solutions tailored to your business goals. We are more than just a development team we act as a strategic technology partner, capable of handling projects of any scale and complexity while maintaining exceptional quality standards.
+             At WebLance, we focus on delivering high performance digital solutions tailored to your business goals. We are more than just a development team we act as a strategic technology partner, capable of handling projects of any scale and complexity while maintaining exceptional quality standards.
             </p>
             <p>
              From lightweight web applications to scalable SaaS platforms, we design and build solutions that improve efficiency and drive sustainable growth. Our engineers stay aligned with the latest advancements in modern development, cloud infrastructure, DevOps practices, and security to ensure reliable, future ready results for our clients.
@@ -32,12 +33,7 @@ const Solution: React.FC<SolutionProps> = ({ onNavigate }) => {
 
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative w-80 h-80 md:w-[450px] md:h-[450px]">
-             <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-2xl">
-                <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z" fill="#2563eb" />
-                <path d="M50 25 L75 40 L75 60 L50 75 L25 60 L25 40 Z" fill="#1d4ed8" />
-                <rect x="40" y="40" width="20" height="20" fill="white" opacity="0.1" />
-                <path d="M50 35 L65 45 L65 55 L50 65 L35 55 L35 45 Z" fill="#3b82f6" />
-             </svg>
+            <img src = {demo} className="w-full h-full object-cover rounded-2xl "></img>
           </div>
         </div>
       </div>
