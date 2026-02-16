@@ -135,7 +135,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({ onNavigate }) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white pt-24 md:pt-32">
-          <h1 className="text-sm md:text-5xl font-bold mb-8 reveal tracking-tight">WebLance Services</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-8 reveal tracking-tight">WebLance Services</h1>
           <p className="max-w-3xl text-lg md:text-2xl opacity-90 leading-relaxed reveal font-light" style={{ transitionDelay: '0.2s' }}>
             At WebLance, we deliver end-to-end web development and design solutions for startups, SMEs, and enterprises. Our expertise includes full-stack MERN development, UI/UX design, and scalable software engineering, as well as CMS platforms like WordPress and Wix for easy content management and professional websites.
           </p>

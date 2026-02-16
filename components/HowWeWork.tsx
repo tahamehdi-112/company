@@ -69,7 +69,7 @@ const HowWeWork: React.FC<HowWeWorkProps> = ({ onNavigate }) => {
         />
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="container mx-auto px-6 md:px-12 relative z-10 text-white text-center">
-          <h1 className="text-sm md:text-5xl font-extrabold mb-8 reveal tracking-tight">HOW WE WORK</h1>
+          <h1 className="text-3xl md:text-5xl font-extrabold mb-8 reveal tracking-tight">HOW WE WORK</h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl opacity-90 leading-relaxed reveal font-medium" style={{ transitionDelay: '0.2s' }}>
            Our expert team delivers scalable, high-quality web and software solutions through efficient processes tailored to your business needs.
           </p>
