@@ -10,6 +10,9 @@ import WhatWeDo from './components/WhatWeDo';
 import HowWeWork from './components/HowWeWork';
 import ContactPage from './components/ContactPage';
 import AboutUs from './components/AboutUs';
+import CompanySupportBot from "./components/CompanySupportBot";
+
+
 
 export type PageType = 'home' | 'what-we-do' | 'how-we-work' | 'contact' | 'about-us';
 
@@ -54,6 +57,7 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden selection:bg-blue-600 selection:text-white">
       <Header isScrolled={isScrolled} onNavigate={navigateTo} currentPage={currentPage} />
+     
       <main>
         {currentPage === 'home' ? (
           <>
@@ -73,8 +77,11 @@ const App: React.FC = () => {
         ) : (
           <AboutUs targetSection={targetSection} onNavigate={navigateTo} />
         )}
+      
       </main>
+     
       <Footer onNavigate={(page, section) => navigateTo(page as PageType, section)} />
+            <CompanySupportBot/>
     </div>
   );
 };
