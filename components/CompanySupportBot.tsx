@@ -1,21 +1,29 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send } from "lucide-react";
-import botLogo from './assests/logo.png';
+import OpenAI from "openai";
+import botLogo from "./assests/logo.png";
 
 interface Message {
   role: "user" | "bot";
   content: string;
 }
 
+const openai = new OpenAI({
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY,
+  dangerouslyAllowBrowser: true,
+});
+
 const CompanySupportBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
       content:
-        "Hello 👋 Welcome to the Weblance. How can I assist you regarding our services?",
+        "Hello 👋 Welcome to WebLance. How can I assist you regarding our services?",
     },
   ]);
 
@@ -23,45 +31,63 @@ const CompanySupportBot = () => {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, loading]);
 
-  const generateReply = (text: string) => {
-    const msg = text.toLowerCase();
+  const getGPTReply = async (userInput: string) => {
+    try {
+      const completion = await openai.chat.completions.create({
+        model: "gpt-4o-mini",
+        messages: [
+          {
+            role: "system",
+            content: `
+You are a professional support chatbot for WebLance, a modern web development company.
 
-    if (msg.includes("service") || msg.includes("what do you do")) {
-      return "We specialize in modern web development including React, TypeScript, and scalable frontend solutions.";
+Rules:
+- Only answer questions related to WebLance services, pricing, team, projects, or contact.
+- If the question is unrelated, politely refuse.
+- Keep answers short, professional, and helpful.
+            `,
+          },
+          ...messages.map((msg) => ({
+            role: msg.role === "bot" ? "assistant" : "user",
+            content: msg.content,
+          })),
+          {
+            role: "user",
+            content: userInput,
+          },
+        ],
+      });
+
+      return (
+        completion.choices[0].message.content ||
+        "Sorry, I couldn't generate a response."
+      );
+    } catch (error) {
+      console.error(error);
+      return "Something went wrong. Please try again.";
     }
-
-    if (msg.includes("team") || msg.includes("developer")) {
-      return "Our team consists of experienced frontend and full-stack developers focused on delivering high-quality digital solutions.";
-    }
-
-    if (msg.includes("contact") || msg.includes("email")) {
-      return "You can contact us through the contact section on this website. We typically respond within 24 hours.";
-    }
-
-    if (msg.includes("price") || msg.includes("cost")) {
-      return "Project pricing depends on requirements. Please share your project details via our contact form for a custom quote.";
-    }
-
-    if (msg.includes("project") || msg.includes("work")) {
-      return "We have worked on multiple corporate and modern UI-based projects. You can explore our portfolio section for more details.";
-    }
-
-    return "Sorry, I can only assist with questions related to our company and services.";
   };
 
-  const handleSend = () => {
-    if (!input.trim()) return;
+  const handleSend = async () => {
+    if (!input.trim() || loading) return;
 
     const userMessage: Message = { role: "user", content: input };
-    const botReply: Message = {
+
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
+    setLoading(true);
+
+    const reply = await getGPTReply(input);
+
+    const botMessage: Message = {
       role: "bot",
-      content: generateReply(input),
+      content: reply,
     };
 
-    setMessages((prev) => [...prev, userMessage, botReply]);
-    setInput("");
+    setMessages((prev) => [...prev, botMessage]);
+    setLoading(false);
   };
 
   return (
@@ -70,7 +96,7 @@ const CompanySupportBot = () => {
       <div className="fixed bottom-6 right-6 z-50">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-xl transition-all duration-300 "
+          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-xl transition-all duration-300"
         >
           {isOpen ? <X size={22} /> : <MessageCircle size={22} />}
         </button>
@@ -84,17 +110,20 @@ const CompanySupportBot = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 80, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-20 right-6 w-80 bg-transparent rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col h-[400px] border-2 border-blue-500 p-0"
-
+            className="fixed bottom-20 right-6 w-80 bg-white rounded-2xl shadow-2xl overflow-hidden z-50 flex flex-col h-[420px]"
           >
             {/* Header */}
-            <div className="bg-blue-600 text-white p-4 font-semibold">
-             <img src={botLogo} className="w-6 h-6 inline-block mr-2" />
-                WebLance Support
+            <div className="bg-blue-600 text-white p-4 font-semibold flex items-center">
+              <img
+                src={botLogo}
+                alt="bot"
+                className="w-6 h-6 inline-block mr-2"
+              />
+              WebLance Support
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto  p-3 space-y-3 text-sm bg-blue-300/10 backdrop-blur-md ">
+            <div className="flex-1 overflow-y-auto p-3 space-y-3 text-sm bg-gray-50">
               {messages.map((msg, index) => (
                 <div
                   key={index}
@@ -107,13 +136,20 @@ const CompanySupportBot = () => {
                   {msg.content}
                 </div>
               ))}
+
+              {loading && (
+                <div className="bg-white shadow p-2 rounded-lg max-w-[80%]">
+                  Typing...
+                </div>
+              )}
+
               <div ref={bottomRef} />
             </div>
 
             {/* Input */}
-            <div className="flex border-none bg-white p-0">
+            <div className="flex border-t bg-white">
               <input
-                className="flex-1 p-3 text-sm outline-none "
+                className="flex-1 p-3 text-sm outline-none"
                 placeholder="Ask about our services..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
@@ -121,7 +157,8 @@ const CompanySupportBot = () => {
               />
               <button
                 onClick={handleSend}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 transition"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 transition disabled:opacity-50"
+                disabled={loading}
               >
                 <Send size={16} />
               </button>
